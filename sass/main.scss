@@ -152,21 +152,6 @@ h1.company-name {
 		&:hover{
 			color: col.$gold;
 		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			top:0;
-			left:0;
-			height: 100%;
-			width: 100%;
-			border: 1px solid col.$gold;
-			opacity: 0;
-
-			&:hover::before {
-				animation: pulse 1s;
-			}
-		}
 	}
 }
 

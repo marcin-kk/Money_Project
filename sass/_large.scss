@@ -49,31 +49,45 @@
 			}
 
 			&__bg-icon-two {
-                display: block;
-                top: 10em;
+				display: block;
+				top: 10em;
 				left: 35%;
 				width: 5%;
-                animation: rotate-left 55s infinite linear;
+				animation: rotate-left 55s infinite linear;
 			}
 		}
 
+		.nav {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			padding: 1em;
 
-        .nav {
-            grid-column: 1/2;
-            grid-row: 1/2;
-            padding: 1em;
+			&-desktop {
+				display: block;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			}
+			&__link {
+				color: col.$white;
 
-            &-desktop {
-                display: block;
-                border-bottom: 1px solid rgba(255,255,255,.2);
-            }
-            &__link {
-                color: col.$white;
-            }
-        }
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					border: 1px solid col.$gold;
+					opacity: 0;
+				}
 
-        .hamburger {
-            display: none;
-        }
+				&:hover::before {
+					animation: pulse 1s;
+				}
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
 	}
 }
