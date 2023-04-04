@@ -1,8 +1,8 @@
 @use './colors' as col;
-@use './animations' as ani;
-@use './small' as sm;
-@use './medium' as md;
-@use './large' as lg;
+@use './animations' as *;
+@use './small' as *;
+@use './medium' as *;
+@use './large' as*;
 
 *,
 *::before,
@@ -169,3 +169,10 @@ h1.company-name {
 		}
 	}
 }
+
+
+//media queries
+
+@include sm;
+@include md;
+@include lg;
