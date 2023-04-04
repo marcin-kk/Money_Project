@@ -2,6 +2,9 @@
 
 @mixin lg {
 	@media (min-width: 992px) {
+		h1.company-name {
+			font-size: 6rem;
+		}
 		.header {
 			grid-template-rows: auto 1fr 1fr;
 
@@ -90,4 +93,17 @@
 			display: none;
 		}
 	}
+    
+@media(min-width:1200px) {
+    .header {
+        &__text {
+            p {
+                font-size: 2.2rem;
+            }
+        }
+
+    }
+    
+}
+
 }
