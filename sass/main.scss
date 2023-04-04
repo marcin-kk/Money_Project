@@ -1,10 +1,29 @@
-* {
+@use './colors' as col;
+@use './animations' as ani;
+@use './small' as sm;
+@use './medium' as md;
+@use './large' as lg;
+
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-body {
-	font-family: 'Cinzel', serif;
-	font-family: 'Raleway', sans-serif;
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	color: col.$white;
+	background-color: col.$dark;
+}
+
+// body {
+// 	font-family: 'Cinzel', serif;
+// }
