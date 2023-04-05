@@ -37,6 +37,28 @@ h1.company-name {
 	max-width: 1200px;
 }
 
+.section-title {
+	position: relative;
+	margin: 0 auto 2em;
+	font-size: 3.2rem;
+	color: col.$gold;
+	font-weight: 200;
+	width: fit-content;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -0.1em;
+		left: 0;
+		width: 40px;
+		height: 2px;
+		background-color: col.$gold;
+	}
+	span {
+		font-weight: 900;
+	}
+}
+
 //header
 .header {
 	display: grid;
@@ -212,16 +234,65 @@ h1.company-name {
 
 		&--one {
 			grid-row: 1/2;
-			grid-column: 1/-1
+			grid-column: 1/-1;
 		}
 		&--two {
 			grid-row: 2/3;
-			grid-column: 1/-1
+			grid-column: 1/-1;
 		}
 		&--three {
 			grid-row: 3/4;
-			grid-column: 1/-1
+			grid-column: 1/-1;
 		}
+	}
+}
+
+//info
+
+.info {
+	position: relative; //as we need to position all the icons
+	display: grid;
+	grid-template-areas:
+		'title title title'
+		'box box box'
+		'box box box';
+	padding: 6em 2em;
+
+	&__title {
+		grid-area: title;
+	}
+	&__boxes {
+		grid-area: box;
+	}
+	&__box-img {
+		width: 100%;
+		object-fit: cover;
+		filter: sepia();
+	}
+	&__box-title {
+		margin: 0.3em 0;
+		font-size: 2.6rem;
+		color: col.$gold;
+		font-weight: 200;
+	}
+	&__box-text {
+		margin-bottom: 0.5em;
+	}
+	&__box-link {
+		display: block;
+		margin-bottom: 2em;
+		font-weight: bold;
+		color: col.$gold;
+		text-decoration: none;
+		text-align: right;
+		transition: color 0.3s;
+		&:hover {
+			color: col.$darkgold;
+		}
+	}
+	&__bg-icon {
+		//shouldn't be visible on mobile
+		display: none;
 	}
 }
 
